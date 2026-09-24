@@ -397,6 +397,18 @@ local Window = Rayfield:CreateWindow({
 -- Main Tab
 local MainTab = Window:CreateTab("Main", 4483362458)
 
+MainTab:CreateSection("Quick Guide")
+MainTab:CreateParagraph({
+    Title = "How to use",
+    Content = "1) Choose the egg rarity. 2) Turn on only the features you need. 3) Use Scan Eggs Now if the target list is empty. 4) Turn Auto Farm off before changing major settings."
+})
+
+MainTab:CreateParagraph({
+    Title = "Feature status",
+    Content = "Auto Farm: OFF | Auto Deposit: OFF | Auto Open: OFF\nStart with Auto Farm only, then enable Auto Deposit or Auto Open if needed."
+})
+
+
 MainTab:CreateDropdown({
     Name        = "Target Egg Rarity",
     Options     = Rarities,
@@ -475,6 +487,13 @@ MainTab:CreateSlider({
 
 -- Teleports Tab
 local TeleTab = Window:CreateTab("Teleports", 4483362458)
+
+TeleTab:CreateSection("Teleport Guide")
+TeleTab:CreateParagraph({
+    Title = "What each button does",
+    Content = "Base/Home: moves you to the detected base.\nRarest Egg: moves to the best detected egg.\nSell Zone: moves to the detected selling area.\nInstant TP: uses direct position movement."
+})
+
 
 TeleTab:CreateButton({
     Name     = "Teleport to Base / Home",
@@ -581,6 +600,6 @@ end)
 
 Rayfield:Notify({
     Title    = "Dino Legend Hub Loaded",
-    Content  = "Ready for Delta Executor",
-    Duration = 5,
+    Content  = "Interface ready. Start with Scan Eggs Now, then enable the features you want.",
+    Duration = 6,
 })
