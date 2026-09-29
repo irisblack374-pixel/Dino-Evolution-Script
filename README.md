@@ -1,18 +1,21 @@
-# Discord Quest Bot
+# Dino Evolution Script
 
-A Discord bot that provides server-managed quests using the official Discord Bot API.
+A modular TypeScript Discord quest bot.
 
-## Features
-- /quests — show available quests
-- /quest-progress — show your progress
-- /quest-complete — claim a completed quest
-- Tracks message and voice activity inside the server
-- No user tokens, selfbots, or account automation
+## تشغيل
 
-## Setup
-1. Copy .env.example to .env
-2. Put your official Discord Bot Token in DISCORD_TOKEN
-3. Run npm install
-4. Run npm start
+```bash
+npm install
+cp .env.example .env
+# ضع DISCORD_TOKEN داخل .env
+npm run build
+npm start
+```
 
-Quest progress is stored in memory in this starter version.
+للتطوير:
+
+```bash
+npm run dev
+```
+
+البيانات حاليًا محفوظة في الذاكرة أثناء تشغيل البوت. أضف قاعدة بيانات لاحقًا إذا أردت حفظ التقدم بعد إعادة التشغيل.
